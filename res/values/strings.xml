@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PMBTLEScanner</string>
+    <string name="hello_world">Hello , brave new world!</string>
+    <string name="edit_message">Hello , brave new world!</string>
+    <string name="button_send">Send!</string>
+    <string name="title_activity_display_message">DisplayMessageActivity</string>
+    <string name="acc_value">Acceleration</string>
+    <string name="sensor_pos">Position</string>
+    <string name="startLEScan">Start Scan</string>
+    <string name="stopLEScan">Stop Scan</string>
+    <string name="LEScan">LE scan</string>
+    <string name="rssi">RSSI</string>
+    <string name="AnnouncedName">Announced name</string>
+
+</resources>
