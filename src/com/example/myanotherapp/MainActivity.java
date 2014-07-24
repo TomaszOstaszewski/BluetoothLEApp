@@ -1,3 +1,6 @@
+/**
+ * 
+ */
 package com.example.myanotherapp;
 
 import android.app.Activity;
@@ -32,7 +35,6 @@ implements BluetoothAdapter.LeScanCallback {
 		STANDBY, //< In standby 
 		SCANNING //< Doing scanning
 	}
-	public final static String EXTRA_MESSAGE = "com.example.myanotherapp.EXTRA_MESSAGE";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -70,7 +72,7 @@ implements BluetoothAdapter.LeScanCallback {
 		super.onResume();
 		mScanOnOffSwitch.setActivated(false);
 
-		if (!getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH_LE)) 	{
+		if (!getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH_LE)) {
 			Toast.makeText(this,  "No LE support", Toast.LENGTH_SHORT).show();
 			finish();
 			return;

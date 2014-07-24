@@ -13,9 +13,6 @@ public class DisplayMessageActivity extends Activity {
 		setContentView(R.layout.activity_display_message);
 		Intent anIntentThatCreatedMe = getIntent();
 		mTextView = (TextView)findViewById(R.id.display_activity_tv_1);
-		String message = anIntentThatCreatedMe.getStringExtra(MainActivity.EXTRA_MESSAGE);
-		mTextView.setTextSize(40);
-		mTextView.setText(message);
 	}
 	TextView mTextView;
 }
