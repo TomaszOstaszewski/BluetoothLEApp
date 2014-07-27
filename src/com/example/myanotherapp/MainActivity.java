@@ -7,7 +7,6 @@ import android.bluetooth.BluetoothManager;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
@@ -17,6 +16,12 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity
 implements BluetoothAdapter.LeScanCallback {
+
+    private Switch mScanOnOffSwitch;
+    private EditText mRSSIControl;
+    private EditText mAnnouncedName;
+    private BluetoothAdapter mBluetoothAdapter;
+    EditText mEditText;
 
 	public enum SCAN_STATUS {
 		STANDBY,
@@ -83,8 +88,7 @@ implements BluetoothAdapter.LeScanCallback {
 		{
 			Toast.makeText(this,  "No LE support", Toast.LENGTH_SHORT).show();
 			finish();
-			return;
-		}
+        }
 
 	}
 
@@ -121,9 +125,5 @@ implements BluetoothAdapter.LeScanCallback {
 		});
 	}
 
-	private Switch mScanOnOffSwitch;
-	private EditText mRSSIControl;
-	private EditText mAnnouncedName;
-	private BluetoothAdapter mBluetoothAdapter; 
-	EditText mEditText;
+
 }

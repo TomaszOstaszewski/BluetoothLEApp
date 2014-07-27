@@ -7,6 +7,8 @@ import android.widget.TextView;
 
 public class DisplayMessageActivity extends Activity {
 
+    private static final int textSize = 40;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -14,7 +16,8 @@ public class DisplayMessageActivity extends Activity {
 		Intent anIntentThatCreatedMe = getIntent();
 		mTextView = (TextView)findViewById(R.id.display_activity_tv_1);
 		String message = anIntentThatCreatedMe.getStringExtra(MainActivity.EXTRA_MESSAGE);
-		mTextView.setTextSize(40);
+
+        mTextView.setTextSize(textSize);
 		mTextView.setText(message);
 	}
 	TextView mTextView;
